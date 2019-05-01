@@ -8,8 +8,8 @@ Get-NetworkTrace.ps1 [[-SaveFolderPath] <string>] [[-FilePrefix] <string>] [[-Fi
 ```
 
 - __SaveFolderPath__: The trace files (*.etl) are stored in this folder.
-- __FilePrefix__: The trace file name prefix. The prefix is part of the file name. The trace file name is like `{Prefix}-{ComputerName}-{yyyyMMdd-HHmmss}-{SequenceNumber}.etl`. e.g. `netcap-WIN10HOST-20180501-233251-000.etl`
-- __FileSwitchInterval__: The interval to switch the trace file. The default interval is 24 hours (86400 seconds).
+- __FilePrefix__: The trace file name prefix. The default prefix is "netcap". The trace file name is like "Prefix-ComputerName-yyyyMMdd-HHmmss-SequenceNumber.etl". e.g. "netcap-WIN10HOST-20180501-233251-000.etl"
+- __FileSwitchInterval__: The interval to switch the trace file. The default interval is 24 hours (86,400 seconds).
 
 Example:
 
