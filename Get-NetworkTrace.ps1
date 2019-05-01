@@ -111,6 +111,10 @@ if (-not (Test-Path -LiteralPath $traceFilePath -PathType Leaf -IsValid))
 # Network capturing loop.
 #
 
+Write-Host -Object ''
+Write-Host -Object 'Ctrl+C to finish capture manually.' -ForegroundColor Cyan -BackgroundColor Black
+Write-Host -Object ''
+
 $traceFileCount = 0
 
 while(1)
