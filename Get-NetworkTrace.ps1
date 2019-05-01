@@ -120,7 +120,7 @@ while(1)
         # Build the trace file path.
         $traceFilePath = Join-Path -Path $SaveFolderPath -ChildPath (Get-TraceFileName -Prefix $FilePrefix -FileCount $traceFileCount)
 
-        #Write-Verbose -Message ('Current trace file: {0}' -f $traceFilePath)
+        Write-Verbose -Message ('Current trace file: {0}' -f $traceFilePath)
 
         # Start a new tracing session.
         $result = Start-NetworkTrace -TraceFileSavePath $traceFilePath
