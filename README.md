@@ -7,7 +7,7 @@ Network trace capturing script by PowerShell with netsh command.
 Get-NetworkTrace.ps1 [[-SaveFolderPath] <string>] [[-FilePrefix] <string>] [[-FileSwitchInterval] <uint32>] [<CommonParameters>]
 ```
 
-- __SaveFolderPath__: The trace files (*.etl) are stored in this folder.
+- __SaveFolderPath__: The trace files (*.etl) are stored in this folder. The default folder path is the current folder path.
 - __FilePrefix__: The trace file name prefix. The default prefix is "netcap". The trace file name is like "Prefix-ComputerName-yyyyMMdd-HHmmss-SequenceNumber.etl". e.g. "netcap-WIN10HOST-20180501-233251-000.etl"
 - __FileSwitchInterval__: The interval to switch the trace file. The default interval is 24 hours (86,400 seconds).
 
