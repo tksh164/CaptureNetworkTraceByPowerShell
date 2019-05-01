@@ -12,6 +12,7 @@ param (
     [uint32] $FileSwitchInterval  # in seconds.
 )
 
+$ErrorActionPreference = 'Stop'
 
 function Invoke-Netsh
 {
@@ -29,6 +30,7 @@ function Invoke-Netsh
     $processInfo.RedirectStandardOutput = $true
     $processInfo.FileName = 'C:\Windows\System32\netsh.exe'
     $processInfo.Arguments = $Arguments
+    $processInfo.WorkingDirectory = $PSScriptRoot
 
     # Create, execute and wait to the process.
     $process = New-Object -TypeName 'System.Diagnostics.Process'
@@ -92,9 +94,10 @@ if (-not $PSBoundParameters.Keys.Contains('FilePrefix')) { $FilePrefix = 'netcap
 if (-not $PSBoundParameters.Keys.Contains('FileSwitchInterval')) { $FileSwitchInterval = 60 * 60 * 24 } # A day in seconds.
 
 # Validate the save folder path.
+$SaveFolderPath = (Resolve-Path -LiteralPath $SaveFolderPath).Path
 if (-not (Test-Path -LiteralPath $SaveFolderPath -PathType Container))
 {
-    throw ('The folder "{0}" does not exists.' -f $SaveFolderPath)
+    throw ('The specified save folder path "{0}" did not represent a folder.' -f $SaveFolderPath)
 }
 
 # Validate the file prefix.
