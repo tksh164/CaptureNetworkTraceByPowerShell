@@ -35,3 +35,7 @@ VERBOSE: Merging traces ... done
 File location = C:\Temp\netcap-WIN10HOST-20180501-001049-000.etl
 Tracing session was successfully stopped.
 ```
+
+## Related
+
+- [NdisEtl2Pcap](https://github.com/tksh164/NdisEtl2Pcap): Convert from the network trace file (*.etl) to the pcap file.
