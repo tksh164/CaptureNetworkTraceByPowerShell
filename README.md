@@ -1,4 +1,7 @@
 # CaptureNetworkTraceByPowerShell
+
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/tksh164/CaptureNetworkTraceByPowerShell)
+
 Network trace capturing script by PowerShell with netsh command.
 
 ## Usage
